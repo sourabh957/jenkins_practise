@@ -7,11 +7,6 @@ pipeline {
             }
         }
         
-        stage('test') {
-            steps {
-                echo 'In the test stage'
-            }
-        }
         
         stage('deploy') {
             steps {
