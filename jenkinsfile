@@ -7,6 +7,12 @@ pipeline {
             }
         }
         
+        stage('test') {
+            steps {
+                echo 'In the test stage'
+            }
+        }
+        
         stage('deploy') {
             steps {
                 echo 'In the deplot stage'
