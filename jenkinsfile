@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                build 'pipeline_1'
                 copyArtifacts filter: 'file.txt', optional: true, projectName: 'pipeline_1'
             }
         }
