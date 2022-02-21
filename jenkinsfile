@@ -3,9 +3,14 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'In the build stage'
+                sh 'echo "Hello World" > file.txt'
             }
         }
-        
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: 'file.txt', 
+            onlyIfSuccessful: true
+        }
     }
 }
