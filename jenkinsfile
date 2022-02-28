@@ -1,6 +1,8 @@
 pipeline {
     agent any
     stages {
-        
+        stage('read') {
+            echo 'In the read stage'
+        }
     }
 }
