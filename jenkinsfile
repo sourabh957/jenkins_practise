@@ -3,14 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'echo "Hello World" > file.txt' 
+                echo 'building in building branch'
             }
         }
     }
-    post {
-        always {
-            archiveArtifacts artifacts: 'file.txt', 
-            onlyIfSuccessful: true
-        }
-    }
+    
 }
