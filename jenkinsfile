@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo 'In the build stage'
+                echo 'building in building branch'
             }
         }
-        
     }
+    
 }
