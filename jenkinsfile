@@ -1,11 +1,25 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('checkout') {
             steps {
-                echo 'building in building branch'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'fdb670e1-cb4a-499f-a67d-37368db1ba5e', url: 'https://github.com/sourabh957/jenkins_practise.git']]])
             }
         }
+
+        stage('build') {
+            steps {
+                git branch: 'main', credentialsId: 'fdb670e1-cb4a-499f-a67d-37368db1ba5e', url: 'https://github.com/sourabh957/jenkins_practise.git'
+                bat 'python test.py'                
+            }
+        }
+
+        stage('test') {
+            steps {
+                echo 'In the testing stage'
+            }
+        }
+
     }
     
 }
