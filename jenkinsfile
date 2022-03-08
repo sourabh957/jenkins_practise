@@ -1,8 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('read') {
-            echo 'In the read stage'
+        stage('build') {
+            steps {
+                echo 'building in building branch'
+            }
         }
     }
+    
 }
