@@ -9,7 +9,7 @@ pipeline {
 
         stage('build') {
             steps {
-                bat "python -m venv C:\ProgramData\Jenkins\.jenkins\workspace"
+                bat "python -m venv C/ProgramData/Jenkins/.jenkins/workspace"
                 git branch: 'main', credentialsId: 'fdb670e1-cb4a-499f-a67d-37368db1ba5e', url: 'https://github.com/sourabh957/jenkins_practise.git'
                 bat "py test.py"
             }
