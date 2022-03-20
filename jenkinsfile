@@ -14,11 +14,11 @@ pipeline {
             steps {
                 git branch: 'main', credentialsId: 'fdb670e1-cb4a-499f-a67d-37368db1ba5e', url: 'https://github.com/sourabh957/jenkins_practise.git'
                 
-                def tempa = ${params.a} - '0'
+                def tempa = ${params.a}
                 
                 int a = tempa as int
                 
-                def tempb = ${params.b} - '0'
+                def tempb = ${params.b}
                 
                 int b = tempb as int
                 
