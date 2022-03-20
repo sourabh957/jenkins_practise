@@ -13,9 +13,9 @@ pipeline {
         stage('build') {
             steps {
                 git branch: 'main', credentialsId: 'fdb670e1-cb4a-499f-a67d-37368db1ba5e', url: 'https://github.com/sourabh957/jenkins_practise.git'
-                def tempa = ${params.a}
+                def tempa = ${params.a} - '0'
                 tempa = (int) temp
-                def tempb = ${params.b}
+                def tempb = ${params.b} - '0'
                 tempb = (int) tempb
                 bat "python ${params.function}.py ${params.function} tempa tempb"
             }
