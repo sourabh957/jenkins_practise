@@ -13,7 +13,6 @@ pipeline {
         stage('build') {
             steps {
                 git branch: 'main', credentialsId: 'fdb670e1-cb4a-499f-a67d-37368db1ba5e', url: 'https://github.com/sourabh957/jenkins_practise.git'
-                @Test
                 def tempa = ${params.a} - '0'
                 int a = tempa as int
                 def tempb = ${params.b} - '0'
