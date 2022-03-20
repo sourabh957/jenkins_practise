@@ -1,5 +1,5 @@
 
-properties([parameters([choice(choices: ['add', 'sub', 'mul', 'div'], name: 'function'), string(defaultValue: '0', name: 'a', trim: true), string(defaultValue: '1', name: 'b')])])
+properties([parameters([choice(choices: ['add', 'sub', 'mul', 'div'], name: 'function'), string(defaultValue: '0', name: 'a', trim: true), string(defaultValue: '1', name: 'b', trim: true)])])
 
 pipeline {
     agent any
@@ -14,10 +14,7 @@ pipeline {
             steps {
                 git branch: 'main', credentialsId: 'fdb670e1-cb4a-499f-a67d-37368db1ba5e', url: 'https://github.com/sourabh957/jenkins_practise.git'
                 
-                script {
-                    def tempa = ${params.a} 
-                    def tempb = ${params.b} 
-                }
+                bat "python ${params.function}.py ${params.function} (int) ${params.a} (int) ${params.b} "
             }
         }
 
