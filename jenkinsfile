@@ -17,10 +17,6 @@ pipeline {
                 script {
                     def tempa = ${params.a} 
                     def tempb = ${params.b} 
-
-                    int a = tempa as int 
-                    int b = tempb an int
-
                 }
             }
         }
