@@ -13,7 +13,7 @@ pipeline {
         stage('build') {
             steps {
                 git branch: 'main', credentialsId: 'fdb670e1-cb4a-499f-a67d-37368db1ba5e', url: 'https://github.com/sourabh957/jenkins_practise.git'
-                bat "python -c 'from operation import * ; ${params.function}(2,3)' " 
+                bat "python -c 'from operation import * ; add(2, 4)' " 
             }
         }
 
