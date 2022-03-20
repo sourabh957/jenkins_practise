@@ -19,9 +19,7 @@ pipeline {
                     def tempb = ${params.b} 
 
                     int a = tempa as int 
-                    int b = tempb an int 
-
-                    bat "python ${params.function}.py ${params.function} a b"
+                    int b = tempb an int
 
                 }
             }
