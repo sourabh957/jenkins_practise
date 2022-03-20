@@ -16,7 +16,7 @@ pipeline {
                 
                 string tempa = ${params.a}
                 
-                Integer a = tempa as Integer
+                def a = tempa as Integer
                 
                 string tempb = ${params.b}
                 
