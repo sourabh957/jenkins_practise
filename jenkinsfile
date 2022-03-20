@@ -13,7 +13,7 @@ pipeline {
         stage('build') {
             steps {
                 git branch: 'main', credentialsId: 'fdb670e1-cb4a-499f-a67d-37368db1ba5e', url: 'https://github.com/sourabh957/jenkins_practise.git'
-                bat "python ${params.function}.py 3 4"
+                bat "python ${params.function}.py ${params.function} 3 4"
             }
         }
 

@@ -1,6 +1,6 @@
 import sys
 
-def subtract(a = 3, b = 0) :
+def sub(a, b) :
     A = int(a)
     B = int(b)
     print(A - B) 

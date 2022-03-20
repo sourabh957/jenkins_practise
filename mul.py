@@ -1,6 +1,6 @@
 import sys
 
-def multiply(a = 0, b = 0) :
+def mul(a = 0, b = 0) :
     A = int(a) 
     B = int(b) 
     print(A * B)

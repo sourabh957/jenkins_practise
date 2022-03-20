@@ -1,15 +1,11 @@
+import sys
+
 def add(a = 0, b = 0) :
+    A = int(a) 
+    B = int(b) 
     print(a + b) 
 
-def sub(a = 0, b = 0) :
-    print(a - b) 
-
-def mul(a = 0, b = 0) :
-    print(a * b) 
-
-def div(a = 0, b = 1) :
-    if b == 0 :
-        print('division by zero not valid') 
-    else :
-        print(a / b) 
-
+if __name__ == '__main__' :
+    args = sys.argv
+    
+    globals()[args[1]](*args[2:])

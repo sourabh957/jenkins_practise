@@ -1,6 +1,6 @@
 import sys
 
-def divide(a = 0, b = 1) :
+def div(a = 0, b = 1) :
     A = int(a) 
     B = int(b) 
 
