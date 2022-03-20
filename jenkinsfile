@@ -1,3 +1,6 @@
+
+properties([parameters([choice(choices: ['add', 'sub', 'mul', 'div'], name: 'function')])])
+
 pipeline {
     agent any
     stages {
