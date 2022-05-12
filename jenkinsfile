@@ -6,10 +6,5 @@ pipeline {
                 echo 'echo in build stage'
             }
         }
-        stage('testing') {
-            steps {
-                echo 'echo in testing stage'
-            }
-        }
     }
 }
